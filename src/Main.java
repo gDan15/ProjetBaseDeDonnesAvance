@@ -18,7 +18,7 @@ public class Main {
 	    MongoClientOptions.Builder options = MongoClientOptions.builder().sslEnabled(true);
 	    
 	    // Creating Credentials 
-//	    char[] password= {'D','@','n','e','l','e','c','t','r','o','5','9','M','i'};
+//	    char[] password= {};
 //	    MongoCredential credential = MongoCredential.createCredential("gDan","Test",password);
 	    
 	    //mongodb+srv://gDan:<PASSWORD>@cluster0-tgfhl.mongodb.net/test
