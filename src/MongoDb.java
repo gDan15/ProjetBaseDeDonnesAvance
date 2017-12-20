@@ -7,7 +7,6 @@ import com.mongodb.MongoClientURI;
 
 //package data;
 public class MongoDb {
-//	private MongoClientURI uri;
 	private String database;
 	private String table;
 	private MongoClient mongoClient;
@@ -18,6 +17,7 @@ public class MongoDb {
 		this.database = database;
 		this.table=table;
 	}
+	
 	public void addColumnRandomValue(String column, Object value) {
 		DBCursor curs;
 		DB db = this.mongoClient.getDB(this.database);	
@@ -35,6 +35,8 @@ public class MongoDb {
 				if(number < 5) {
 					value=!(Boolean)value;
 				}
+			}else if(value instanceof DateTime){
+				
 			}
 			BasicDBObject p = (BasicDBObject) curs.next();
 			BasicDBObject newDocument =
@@ -44,6 +46,11 @@ public class MongoDb {
 			i++;
 		}
 	}
+
+	public String getData(List<String> columnsToRead, Object value) {
+		
+	}
+	
 	public void stopConnection() {
 		this.mongoClient.close();
 	}
