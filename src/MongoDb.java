@@ -5,7 +5,6 @@ import com.mongodb.DBCursor;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 
-//package data;
 public class MongoDb {
 	private String database;
 	private String table;
@@ -35,8 +34,6 @@ public class MongoDb {
 				if(number < 5) {
 					value=!(Boolean)value;
 				}
-			}else if(value instanceof DateTime){
-				
 			}
 			BasicDBObject p = (BasicDBObject) curs.next();
 			BasicDBObject newDocument =
@@ -45,12 +42,7 @@ public class MongoDb {
 			coll.update(p, newDocument);
 			i++;
 		}
-	}
-
-	public String getData(List<String> columnsToRead, Object value) {
-		
-	}
-	
+	}	
 	public void stopConnection() {
 		this.mongoClient.close();
 	}
