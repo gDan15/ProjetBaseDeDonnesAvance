@@ -12,5 +12,6 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="C:/Users/Gaétan/Eclipse_projects/mongo-java-driver-3.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Gaétan/Eclipse_projects/java-json.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
