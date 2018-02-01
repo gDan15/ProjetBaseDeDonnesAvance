@@ -63,13 +63,6 @@ public class MongoDb {
 		DBObject dbObject = (DBObject) JSON.parse(queryString);
 		return dbObject;
 	}
-	public List<DBObject> sortList(List<DBObject> listDBObject) {
-		List<DBObject> listToReturn = new ArrayList<DBObject>();
-		for(DBObject document : listDBObject) {
-			
-		}
-		return null;
-	}
 	public void stopConnection() {
 		this.mongoClient.close();
 	}
